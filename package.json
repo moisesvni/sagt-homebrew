@@ -1,10 +1,10 @@
 {
-  "name": "atpb",
+  "name": "sagt-homebrew",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "postinstall": "npm run build",
-    "start": "node server/bin/server.js",
+    "start": "node ./server/bin/server.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -15,6 +15,7 @@
     "axios": "^0.19.0",
     "chart.js": "^2.9.1",
     "core-js": "^2.6.5",
+    "johnny-five": "^1.4.0",
     "mysql": "^2.17.1",
     "socket.io": "^2.3.0",
     "vue": "^2.6.10",
