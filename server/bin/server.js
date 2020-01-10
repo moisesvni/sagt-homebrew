@@ -74,7 +74,6 @@ function normalizaPort(val) {
 
 // });
 
-
 http.listen(port, () => {
     console.log(`backend listening na porta ${port}`);
 });
