@@ -1,4 +1,4 @@
-# atpb
+# sistema automação e gestão - homebrew
 
 ## Project setup
 ```
@@ -7,7 +7,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production
@@ -15,9 +15,9 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
+### Run your aplication
 ```
-npm run test
+npm run start
 ```
 
 ### Lints and fixes files
