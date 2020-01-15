@@ -30,6 +30,9 @@ module.exports = {
   async post(req,res) {
     try {
       const receitaCollection = await receita.create(req.body);
+      for (item of req.body.rampas) {
+        await rampa.create({ receitaId: receitaCollection.id, ...item });
+      }
       res.status(201).send(receitaCollection)
     }
     catch(e){
@@ -59,7 +62,7 @@ module.exports = {
     try {
       const { id } = req.params;
       const deleted = await receita.destroy({ where: { id: id }});
-      if (deleted) return res.status(204).send({ count: 1, data: deleted });
+      if (deleted) return res.status(204).send(deleted);
       throw new Error("receita not found");
     } catch (error) {
       return res.status(500).send(error.message);

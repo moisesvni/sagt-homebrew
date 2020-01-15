@@ -18,13 +18,9 @@
     <v-flex lg12 md12>   
       <v-data-table
         :headers="headers" :items="items" :search="search" class="elevation-1">
-        <template slot="items" slot-scope="props">
-          <td>{{ props.item.id }}</td>
-          <td class="text-xs-left">{{ props.item.nome }}</td>
-          <td class="justify-center layout px-0">
-            <v-icon small class="mr-2" @click="editItem(props.item)">fas fa-edit</v-icon>
-            <v-icon small @click="deleteItem(props.item)">fas fa-trash</v-icon>
-          </td>
+        <template  v-slot:item.action="{ item }">
+          <v-icon small class="mr-2" @click="editItem(item)">fas fa-edit</v-icon>
+          <v-icon small @click="deleteItem(item)">fas fa-trash</v-icon>
         </template>
       </v-data-table>
     </v-flex>   
@@ -40,7 +36,8 @@ export default {
     headers: [
         { text: 'ID', align: 'left', sortable: true, value: 'id'},
         { text: 'Nome', value: 'nome' },
-        { text: 'Ações', sortable: false, align: 'center' }
+        { text: 'Rampas', value: 'rampas.length' },
+        { text: 'Ações', value: 'action', sortable: false, align: 'center' }
     ],
     items: [],
   }),
@@ -51,7 +48,15 @@ export default {
     filter() {
       return "filter";
     }
-  }
+  },
+  methods: {
+    editItem (item) {
+      console.log(item);
+    },
+    deleteItem (item) {
+      console.log(item);
+    }
+  },
 };
 </script>
 

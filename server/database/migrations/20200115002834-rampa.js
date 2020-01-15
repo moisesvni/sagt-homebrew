@@ -21,7 +21,8 @@ module.exports = {
       },
       receitaId : {
         type : DataTypes.INTEGER,
-        // onDelete : 'CASCADE',
+        onUpdate: 'CASCADE',
+        onDelete : 'CASCADE',
         references : {
             model : 'receita',
             key : 'id',

@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
 
      receita.associate = (models) => {
       receita.hasMany(models.rampa, {
-        foreignKey: 'receitaId'
+        foreignKey: 'receitaId',
+        onDelete: 'cascade'
       })
      }
     return receita;
