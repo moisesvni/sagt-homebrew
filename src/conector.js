@@ -1,9 +1,17 @@
 import axios from 'axios'
+const port = normalizaPort(process.env.PORT || '3099');
 
 const client = axios.create({
-  baseURL: 'http://localhost:3099/api',
+  baseURL: `http://localhost:${port}/api`,
   json: true
 })
+
+function normalizaPort(val) {
+  const port = parseInt(val, 10);
+  if (isNaN(port)) return val;
+  else if (port >= 0) return port;
+  return false;
+}
 
 export default {
   async execute (method, resource, data) {
