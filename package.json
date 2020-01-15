@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "postinstall": "npm run build",
-    "start": "node ./server/bin/server.js",
+    "start": "node ./server/bin/api.js",
     "serve": "vue-cli-service serve",
-    "dev": "nodemon ./server/bin/server.js",
+    "dev": "nodemon ./server/bin/api.js",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -18,7 +18,6 @@
     "core-js": "^2.6.5",
     "express": "^4.17.1",
     "johnny-five": "^1.4.0",
-    "mysql": "^2.17.1",
     "mysql2": "^2.1.0",
     "pg": "^7.17.0",
     "sequelize": "^5.21.3",
@@ -35,6 +34,7 @@
     "@vue/cli-plugin-eslint": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
     "babel-eslint": "^10.0.1",
+    "cors": "^2.8.5",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "nodemon": "^2.0.2",

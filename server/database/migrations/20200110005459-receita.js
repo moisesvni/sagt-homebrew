@@ -1,13 +1,16 @@
-// criar - npx sequelize-cli seed:generate --name demo
-// executar - npx sequelize db:migrate:all
+// criar tabela - npx sequelize-cli migration:generate --name xaxa
+// criar dados tabela - npx sequelize-cli seed:generate --name xaxa
 
-//px sequelize-cli db:migrate:undo
+// executar criacao de tabelas - npx sequelize db:migrate
+// popular tabelas - npx sequelize-cli db:migrate:all
+
+//npx sequelize-cli db:migrate:undo
 //npx sequelize-cli db:migrate:undo:all --to XXXXXXXXXXXXXX-create-posts.js
 
 
 module.exports = {
   up: (queryInterface, DataTypes) => {
-    return queryInterface.createTable('Receita', {
+    return queryInterface.createTable('receita', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -17,29 +20,11 @@ module.exports = {
       nome: {
         allowNull: false,
         type: DataTypes.STRING,
-      },
-      createdAt: {
-        allowNull: false,
-        type: DataTypes.DATE,
-      },
-      updatedAt: {
-        allowNull: false,
-        type: DataTypes.DATE,
-      },
-      userId : {
-        allowNull: false,
-        type : DataTypes.INTEGER,
-        // onDelete : 'CASCADE',
-        references : {
-            model : 'Users',
-            key : 'id',
-            as : 'userId'
-        },
-      },
+      }
     });
   },
 
   down: (queryInterface) => {
-    return queryInterface.dropTable('Users');
+    return queryInterface.dropTable('r');
   }
 };

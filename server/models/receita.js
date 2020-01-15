@@ -1,7 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
-    const Receita = sequelize.define('Receita', {
+    const receita = sequelize.define('receita', {
       nome: DataTypes.STRING
     });
-  
-    return Receita;
+
+     receita.associate = (models) => {
+      receita.hasMany(models.rampa, {
+        foreignKey: 'receitaId'
+      })
+     }
+    return receita;
   }

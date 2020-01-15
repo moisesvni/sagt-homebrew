@@ -1,16 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
-import apexCharts from './plugins/apex-charts';
+import router from './route/index.js'
 
 Vue.config.productionTip = false
 
+require('./plugins/apex-charts');
+
 new Vue({
+  render: h => h(App),
   router,
   store,
-  vuetify,
-  apexCharts,
-  render: h => h(App)
+  vuetify
 }).$mount('#app')

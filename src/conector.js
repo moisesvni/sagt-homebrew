@@ -1,14 +1,12 @@
 import axios from 'axios'
 
 const client = axios.create({
-  // baseURL: 'https://pochetemax.herokuapp.com/',
-  baseURL: 'http://localhost:3024/',
+  baseURL: 'http://localhost:3099/api',
   json: true
 })
 
 export default {
   async execute (method, resource, data) {
-    // inject the accessToken for each request
     // let accessToken = await Vue.prototype.$auth.getAccessToken()
     return client({
       method,
@@ -22,7 +20,7 @@ export default {
     })
   },
   list (collection) {
-    return this.execute('get', `/${collection}/list`)
+    return this.execute('get', `/${collection}`)
   },
   get (collection, id) {
     return this.execute('get', `/${collection}/${id}`)

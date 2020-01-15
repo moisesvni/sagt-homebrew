@@ -27,6 +27,9 @@
 </v-container>
 </template>
 <script>
+
+import conector from '@/conector'
+
 export default {
   data: () => ({
     chartOptions: {
@@ -116,6 +119,9 @@ export default {
       labels: ["Percent"]
     },
     series2: [88]
-  })
+  }),
+  async mounted() {
+    this.fonecedores = await conector.list('fornecedor');
+  },
 };
 </script>
