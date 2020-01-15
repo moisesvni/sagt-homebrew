@@ -8,8 +8,6 @@ router.get('/', function (req, res, next) {
     });
 });
 
-const fornecedor = require('./fornecedor');
-router.use('/fornecedor', fornecedor);
 
 const receitaRouter = require('./receita');
 router.use('/receita', receitaRouter);

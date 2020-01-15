@@ -20,7 +20,7 @@
           outlined
           tile
         >
-          One of three columns
+          <testiculo/>
         </v-card>
       </v-col>
     </v-row>
