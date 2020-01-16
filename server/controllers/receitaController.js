@@ -7,7 +7,6 @@ module.exports = {
       let receitaCollection;
       if(req.params.id) receitaCollection = await receita.findOne({ 
         where: { id: req.params.id }, 
-        // include: [rampa], attributes: { exclude: ['rampaId'] }
       });
       else { 
         receitaCollection = await receita.findAll({
@@ -46,6 +45,13 @@ module.exports = {
       const receitaCollection = await receita.findOne({ where: { id: req.params.id } });
         if (receitaCollection) {
           const updatedCollection = await receitaCollection.update(req.body);
+          for (item of req.body.rampas) {
+             if (item.id) {
+              const rampaCollection = await rampa.findOne({ where: { id: item.id } });
+              await rampaCollection.update(item);
+             }
+            else await rampa.create({ receitaId: receitaCollection.id, ...item });
+          }
           res.status(201).send(updatedCollection);
         }
         else {

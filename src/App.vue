@@ -54,9 +54,9 @@ export default {
   name: "App",
   data: () => ({
     items: [
-      { title: "Dashboard", icon: "fas fa-home", router: '/' },
-      { title: "Receita", icon: "fas fa-user-circle", router: '/receita' },
-      { title: "Users", icon: "fas fa-users" }
+      { title: "Dashboard", icon: "fas fa-tachometer-alt", router: '/' },
+      { title: "Receita", icon: "fas fa-utensils", router: '/receita' },
+      { title: "Fabricação", icon: "fas fa-cogs", router: '/fabricacao' }
     ],
     drawer: false,
     mini: false

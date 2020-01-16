@@ -7,9 +7,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // use only dev
-// var cors = require('cors')
-// app.use(cors())
-// app.options("*", cors())
+var cors = require('cors')
+app.use(cors())
+app.options("*", cors())
 
 // api
 const api = require('./route');

@@ -5,7 +5,7 @@
       <apexchart type="bar" :options="chartOptions" :series="series"></apexchart>
     </v-col>
     <v-col cols="12" sm="6">
-      <apexchart type="radialBar" :options="chartOptions2" :series="series2" />
+      <apexchart type="donut" :options="chartOptions2" :series="series2" />
     </v-col>
   </v-row>
   <v-row no-gutters>
@@ -37,13 +37,13 @@ export default {
         id: "vuechart-example"
       },
       xaxis: {
-        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+        categories: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019]
       }
     },
     series: [
       {
-        name: "series-1",
-        data: [30, 40, 35, 50, 49, 60, 70, 91]
+        name: "Produção Geral",
+        data: [30, 40, 35, 50, 99, 160, 270, 320]
       }
     ],
     chartOptions2: {
@@ -116,9 +116,9 @@ export default {
       stroke: {
         lineCap: "round"
       },
-      labels: ["Percent"]
+      labels: ['Kalik Jack', 'Calimero', 'Matifero', 'Ripa Brava', 'Irva Ane']
     },
-    series2: [88]
+    series2: [44, 55, 41, 17, 15]
   }),
   async mounted() {
     this.fonecedores = await conector.list('fornecedor');

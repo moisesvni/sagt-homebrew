@@ -1,16 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import receitaStore from './components/receita/receita-store.js'
 
-Vue.use(Vuex)
+Vue.use(Vuex);
+var store = new Vuex.Store();
 
-export default new Vuex.Store({
-  state: {
-
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  }
-})
+store.registerModule('receita', receitaStore);
+export default store

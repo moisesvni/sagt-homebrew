@@ -7,8 +7,6 @@ import './components/globals.js'
 
 Vue.config.productionTip = false
 
-require('./plugins/apex-charts');
-
 new Vue({
   render: h => h(App),
   router,
