@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-console */
 const { receita, rampa } = require('../models');
 
 module.exports = {
@@ -67,10 +69,10 @@ module.exports = {
   async delete (req, res) {
     try {
       const { id } = req.params;
-      const deleted = await receita.destroy({ where: { id: id }});
-      if (deleted) return res.status(204).send(deleted);
-      throw new Error("receita not found");
+      await receita.destroy({ where: { id: id }});
+      return res.status(204).send(true);
     } catch (error) {
+      console.log(e);
       return res.status(500).send(error.message);
     }
   }

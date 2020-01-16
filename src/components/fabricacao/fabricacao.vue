@@ -5,7 +5,7 @@
   </v-toolbar>
   <v-container fluid>
     <v-row justify="center" align="center">
-      <v-col cols="6" lg="6" sm="6" md="6">
+      <v-col cols="6" lg="6" sm="6" md="6" class="pt-0">
         <v-row justify="center" align="center">
           <v-col cols="12">
             <card-fabricacao/>

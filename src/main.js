@@ -8,8 +8,8 @@ import './components/globals.js'
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
   router,
   store,
-  vuetify
+  vuetify,
+  render: h => h(App),
 }).$mount('#app')

@@ -1,6 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
     const receita = sequelize.define('receita', {
       nome: DataTypes.STRING
+    },
+    {
+      freezeTableName: true,
+      createdAt: false,
+      updatedAt: false
     });
 
      receita.associate = (models) => {
