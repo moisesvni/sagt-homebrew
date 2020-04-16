@@ -35,7 +35,7 @@
 </template>
 <script>
 import { mapActions, mapState } from 'vuex'
-import conector from '@/conector'
+import conector from '@/sagt/conector'
 
 export default {
     data: () => ({

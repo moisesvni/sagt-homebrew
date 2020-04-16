@@ -43,7 +43,7 @@
 </template>
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import conector from '@/conector'
+import conector from '@/sagt/conector'
 
   export default {
     data: () => ({
@@ -73,6 +73,7 @@ import conector from '@/conector'
         }
       },
       totalRampas (receita) {
+        if (!receita && !receita.rampas) return;
         return receita.rampas.length;
       },
       remove () {

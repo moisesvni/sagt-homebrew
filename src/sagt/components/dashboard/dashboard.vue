@@ -20,7 +20,6 @@
           outlined
           tile
         >
-          <testiculo/>
         </v-card>
       </v-col>
     </v-row>
@@ -28,7 +27,7 @@
 </template>
 <script>
 
-import conector from '@/conector'
+// import conector from '@/conector'
 
 export default {
   data: () => ({
@@ -121,7 +120,7 @@ export default {
     series2: [44, 55, 41, 17, 15]
   }),
   async mounted() {
-    this.fonecedores = await conector.list('fornecedor');
+    // this.fonecedores = await conector.list('fornecedor');
   },
 };
 </script>
