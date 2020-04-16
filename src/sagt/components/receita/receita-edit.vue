@@ -70,7 +70,7 @@
       </v-card>
 </template>
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 import conector from '@/sagt/conector'
 
 export default {
@@ -88,7 +88,7 @@ export default {
   },
   computed: mapState('receita', ['receita']),
   methods: {
-     ...mapActions('receita', ['changeDialog', 'changeSnackbar', 'setSnackbarText']),
+    ...mapActions('receita', ['changeDialog', 'changeSnackbar', 'setSnackbarText']),
     reset () {
       this.$refs.form.reset();
     },

@@ -43,7 +43,7 @@ export default {
     loadingData: false,
     menu: false,
     headers: [
-        { text: 'ID', align: 'left', sortable: true, value: 'id'},
+        { text: 'ID', align: 'left', sortable: true, value: 'id' },
         { text: 'Nome', value: 'nome' },
         { text: 'Rampas', value: 'rampas.length' },
         { text: 'Ações', value: 'action', sortable: false, align: 'center' }

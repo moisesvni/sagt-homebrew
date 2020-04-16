@@ -33,7 +33,7 @@ export default {
   data: () => ({
     chartOptions: {
       chart: {
-        id: "vuechart-example"
+        id: 'vuechart-example'
       },
       xaxis: {
         categories: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019]
@@ -41,7 +41,7 @@ export default {
     },
     series: [
       {
-        name: "Produção Geral",
+        name: 'Produção Geral',
         data: [30, 40, 35, 50, 99, 160, 270, 320]
       }
     ],
@@ -57,9 +57,9 @@ export default {
           endAngle: 225,
           hollow: {
             margin: 0,
-            size: "70%",
-            background: "#fff",
-            position: "front",
+            size: '70%',
+            background: '#fff',
+            position: 'front',
             dropShadow: {
               enabled: true,
               top: 3,
@@ -69,8 +69,8 @@ export default {
             }
           },
           track: {
-            background: "#fff",
-            strokeWidth: "67%",
+            background: '#fff',
+            strokeWidth: '67%',
             margin: 0, // margin is in pixels
             dropShadow: {
               enabled: true,
@@ -85,27 +85,27 @@ export default {
             name: {
               offsetY: -10,
               show: true,
-              color: "#888",
-              fontSize: "17px"
+              color: '#888',
+              fontSize: '17px'
             },
             value: {
-              formatter: function(val) {
+              formatter: function (val) {
                 return parseInt(val);
               },
-              color: "#111",
-              fontSize: "36px",
+              color: '#111',
+              fontSize: '36px',
               show: true
             }
           }
         }
       },
       fill: {
-        type: "gradient",
+        type: 'gradient',
         gradient: {
-          shade: "dark",
-          type: "horizontal",
+          shade: 'dark',
+          type: 'horizontal',
           shadeIntensity: 0.5,
-          gradientToColors: ["#ABE5A1"],
+          gradientToColors: ['#ABE5A1'],
           inverseColors: true,
           opacityFrom: 1,
           opacityTo: 1,
@@ -113,13 +113,13 @@ export default {
         }
       },
       stroke: {
-        lineCap: "round"
+        lineCap: 'round'
       },
       labels: ['Kalik Jack', 'Calimero', 'Matifero', 'Ripa Brava', 'Irva Ane']
     },
     series2: [44, 55, 41, 17, 15]
   }),
-  async mounted() {
+  async mounted () {
     // this.fonecedores = await conector.list('fornecedor');
   },
 };

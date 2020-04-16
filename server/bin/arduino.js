@@ -1,10 +1,11 @@
 const five = require('johnny-five');
+const app = require('../apps');
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
 five.Board({
-    port: "COM9"
-}).on('ready', function () {
+    port: 'COM9'
+}).on('ready', () => {
     console.log('ATP Breja Arduino esta OK, vamos que vamos...');
     io.on('connection', socket => {
         //var relay100A = new five.Relay(12);
@@ -55,10 +56,8 @@ five.Board({
         //   }
         // });
 
-        socket.on('disconnect', function () {
+        socket.on('disconnect', () => {
             console.log('conexão fechada...');
         });
-
     });
-
 });

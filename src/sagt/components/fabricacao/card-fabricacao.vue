@@ -1,7 +1,7 @@
 <template>
   <v-card class="mx-auto" max-height="200px">
     <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="50px">
-     <v-card-title class="body-1 white--text">Receita a ser executada.</v-card-title>
+      <v-card-title class="body-1 white--text">Receita a ser executada.</v-card-title>
     </v-img>
     <v-container fluid class="mt-0 pt-0">
       <v-row justify="center" align="center">
@@ -29,7 +29,7 @@
           </v-autocomplete>
         </v-col>
         <v-col cols="6" lg="6" sm="6" md="6">
-           <v-list disabled dense>
+          <v-list disabled dense>
             <v-subheader>Dados</v-subheader>
               <v-col cols="12" class="py-0"><v-icon size="15" class="mr-2">fas fa-clock</v-icon>
                 <span class="caption">Duração: {{ getDuracao() }}</span>
