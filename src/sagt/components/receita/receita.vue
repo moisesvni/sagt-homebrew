@@ -17,7 +17,7 @@
         <v-data-table
           :headers="headers" :items="items" :search="search" class="elevation-1" :loading="loadingData">
           <template  v-slot:item.action="{ item }">
-            <v-icon small class="mr-2" @click="editItem(item)">fas fa-edit</v-icon>
+            <v-icon small class="mr-2" @click="editItem(item)" color="blue darken-3">fas fa-edit</v-icon>
             <confirm-popover slot="activator"  @confirm="deleteItem(item)"/>
           </template>
         </v-data-table>

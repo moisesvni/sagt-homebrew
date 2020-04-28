@@ -25,6 +25,6 @@ module.exports = {
   },
 
   down: (queryInterface) => {
-    return queryInterface.dropTable('r');
+    return queryInterface.dropTable('receita');
   }
 };

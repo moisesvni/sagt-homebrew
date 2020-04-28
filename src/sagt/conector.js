@@ -6,7 +6,7 @@ const client = axios.create({
   json: true
 })
 
-function normalizaPort(val) {
+function normalizaPort (val) {
   const port = parseInt(val, 10);
   if (isNaN(port)) return val;
   else if (port >= 0) return port;

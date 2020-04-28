@@ -29,11 +29,11 @@ export default {
     chartOptions: {
         series: [
             {
-              name: "Rampas",
+              name: 'Rampas',
               data: [0, 55, 68, 75, 100]
             },
             {
-              name: "Temperatura Atual",
+              name: 'Temperatura Atual',
               data: []
             }
         ],

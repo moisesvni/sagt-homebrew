@@ -51,12 +51,12 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
   data: () => ({
     items: [
-      { title: "Dashboard", icon: "fas fa-tachometer-alt", router: '/' },
-      { title: "Receita", icon: "fas fa-utensils", router: '/receita' },
-      { title: "Fabricação", icon: "fas fa-cogs", router: '/fabricacao' }
+      { title: 'Dashboard', icon: 'fas fa-tachometer-alt', router: '/' },
+      { title: 'Receita', icon: 'fas fa-utensils', router: '/receita' },
+      { title: 'Fabricação', icon: 'fas fa-cogs', router: '/fabricacao' }
     ],
     drawer: false,
     mini: false

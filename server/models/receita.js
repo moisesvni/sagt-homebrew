@@ -8,11 +8,11 @@ module.exports = (sequelize, DataTypes) => {
       updatedAt: false
     });
 
-     receita.associate = (models) => {
+    receita.associate = (models) => {
       receita.hasMany(models.rampa, {
         foreignKey: 'receitaId',
         onDelete: 'cascade'
       })
-     }
+    }
     return receita;
   }

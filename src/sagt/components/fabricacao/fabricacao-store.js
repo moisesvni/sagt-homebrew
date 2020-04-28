@@ -7,7 +7,7 @@ export default {
   },
   getters: {
     getRampas: state => {
-      if (!state.receita) return;
+      if (!state.receita && !state.receita.rampas) return;
       return state.receita.rampas.length;
     },
     getDuracao: state => {
@@ -17,7 +17,7 @@ export default {
       let sum = receita.rampas
         .map(item => item.tempo)
         .reduce((prev, curr) => moment.duration(prev, 'HH:mm:ss').add(curr), 0);
-        return moment.utc(sum.asMilliseconds()).format("HH:mm")
+        return moment.utc(sum.asMilliseconds()).format('HH:mm');
       
     }
   },

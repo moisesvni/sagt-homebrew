@@ -1,7 +1,7 @@
 <template>
     <v-menu :value="value" @input="(value) => $emit('input', value)"  offset-x>
       <template v-slot:activator="{ on }">
-          <v-icon v-on="on" small class="mr-2">fas fa-trash</v-icon>
+          <v-icon v-on="on" small class="mr-2" color="red darken-1">fas fa-trash</v-icon>
       </template>
       <v-card>
         <v-list>
@@ -12,15 +12,15 @@
             </v-avatar>
             </v-list-item-avatar>
             <v-list-item-content>
-              <v-list-item-title>Confirma ação?</v-list-item-title>
+              <v-list-item-title class="mb-1">Confirma ação?</v-list-item-title>
               <v-list-item-subtitle>item sera excluído...</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
         </v-list>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn text @click="value = false">Cancelar</v-btn>
-          <v-btn color="primary" text @click="onConfirm">OK</v-btn>
+          <v-btn  @click="value = false">Cancelar</v-btn>
+          <v-btn color="primary" @click="onConfirm">OK</v-btn>
         </v-card-actions>
       </v-card>
     </v-menu>

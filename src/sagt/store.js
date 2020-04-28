@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 //import fabricacaoStore from './components/fabricacao/fabricacao-store'
 
 Vue.use(Vuex);
-var store = new Vuex.Store();
+const store = new Vuex.Store();
 
 //store.registerModule('receita', receitaStore);
 //store.registerModule('fabricacao', fabricacaoStore);
