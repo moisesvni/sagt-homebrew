@@ -1,7 +1,7 @@
 <template>
     <v-menu :value="value" @input="(value) => $emit('input', value)"  offset-x>
       <template v-slot:activator="{ on }">
-          <v-icon v-on="on" small class="mr-2" color="red darken-1">fas fa-trash</v-icon>
+        <v-icon v-on="on" small class="mr-2" color="red darken-1">fas fa-trash</v-icon>
       </template>
       <v-card>
         <v-list>

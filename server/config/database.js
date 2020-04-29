@@ -1,5 +1,5 @@
 
-let db = process.env.NODE_ENV !== 'production' ? 
+let db = process.env.NODE_ENV == 'production' ? 
   {
     username: 'softdsc2_sagt',
     password: '[]1Q2w3e4r',
