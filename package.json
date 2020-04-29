@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "postinstall": "npm run build",
-    "start": "if-env NODE_ENV=production ?? npm run start:prod || npm run start:dev",
-    "start:prod": "node ./server/bin/api.js && npm run serve",
+    "start": "npm run start:prod",
+    "start:prod": "node ./server/bin/api.js && npm run build",
     "start:dev": "nodemon ./server/bin/api.js && npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

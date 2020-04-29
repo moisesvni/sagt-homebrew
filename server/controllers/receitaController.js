@@ -6,7 +6,9 @@ module.exports = {
   async get (req,res, next) {
     try {
       let receitaCollection;
-      if (req.params.id) receitaCollection = await receita.findOne({ where: { id: req.params.id } });
+      let load = [];
+      //if (req.params.load) load = [{ model: req.params.load }];
+      if (req.params.id) receitaCollection = await receita.findOne({ where: { id: req.params.id }, include: [] });
       else receitaCollection = await receita.findAll({ include: [{ model: rampa, attributes: { exclude: ['receitaId'] } }] });
       res.status(201).send({ count: receitaCollection.length, data: receitaCollection });
     }

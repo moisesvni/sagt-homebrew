@@ -6,7 +6,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
-app.use(cors({ origin: 'http://localhost:2424'}));
+app.use(cors({ origin: 'http://localhost:2020' }));
+
 // api
 const api = require('./route');
 app.use('/api', api);

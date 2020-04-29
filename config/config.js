@@ -12,7 +12,7 @@ module.exports = {
     bundleAnalyzerReport: true
   },
   dev: {
-    port: 2424,
+    port: 2020,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
